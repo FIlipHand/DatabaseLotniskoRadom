@@ -1,0 +1,161 @@
+Bramki:
+
+idBramki - napis(3) 
+Terminal - napis(1)
+więzy integralności:
+idBramki - klucz główny
+Terminal - zawiera się w (1, 2,, 3, 4)
+
+PortyLotnicze:
+
+NazwaMiasta - napis(30)
+kodIATA - napis(3)
+Państwo - napis(30)
+więzły integralności:
+NazwaMiasta - nie puste (NOT NULL)
+Państwo - niepuste (NOT NULL)
+kodIATA - klucz główny
+
+Samoloty:
+
+idSamolotu - liczba
+Producent - napis(30)
+Modelm - napis(10)
+Typ napis(12)
+StandLiczbaMiejsc - liczba
+więzy integralności:
+idSamolotu - klucz główny
+Producent - niepuste (NOT NULL)
+Modelm napis - niepuste (NOT NULL)
+Typ napis - zawiera się w ('cargo', 'pasażerski')
+
+LinieLotnicze:
+nazwaLini - napis(30) 
+kodLini - napis(2)
+kraj - napis(30)
+więzy integralności:
+nazwaLini - klucz główny
+kodLini - unikatowy (UNIQUE)
+
+Piloci:
+idPilota - numer
+Imie - napis(30)
+Nazwisko - napis(40)
+Wiek - numer
+Pleć - napis(1) 
+Staż numer
+więzy integralności:
+Imie - niepuste (NOT NULL)
+Nazwisko - niepuste (NOT NULL)
+Wiek - niepuste (NOT NULL)
+Pleć - zawiera się w ('k', 'm')
+Staż - niepuste (NOT NULL)
+idPilota - klucz główny
+
+Odloty:
+
+idLotu - numer
+lotnisko - napis(3)
+idKapitana - numer
+idBramki - napis(3)
+idSamolotu - numer
+liniaLotnicza - napis(25)
+dataOdlotu - data/godzina
+więzy integralności:
+idLotu - klucz główny
+lotnisko - klucz obcy łączący z tabela PortyLotnicze
+idKapitana - klucz obcy łączący z tabela Piloci
+idBramki - klucz obcy łączący z tabela Bramki
+idSamolotu - klucz obcy łączący z tablica Samoloty
+liniaLotnicza - klucz obcy łączący z tablica LinieLotnicze
+dataOdloty - niepuste (NOT NULL)
+
+Przyloty:
+
+idLotu - numer
+lotnisko - napis(3)
+idKapitana - numer
+idBramki - napis(3)
+idSamolotu - numer
+liniaLotnicza - napis(25)
+dataPrzylotu - data/godzina
+więzy integralności:
+idLotu - klucz główny
+lotnisko - klucz obcy łączący z tabela PortyLotnicze
+idKapitana - klucz obcy łączący z tabela Piloci
+idBramki - klucz obcy łączący z tabela Bramki
+idSamolotu - klucz obcy łączący z tablica Samoloty
+liniaLotnicza - klucz obcy łączący z tablica LinieLotnicze
+dataPrzylotu - niepuste (NOT NULL)
+
+Podróżnik:
+
+idLotu - numer
+nrPaszportu - napis(9)
+Imie - napis(20)
+Nazwisko - napis(30)
+Wiek - numer
+bagażRejestowany - napis(3)
+więzy integralności:
+idLotu - klucz obcy łączący z tablica Odloty
+nrPaszportu - klucz główny
+Imie - niepuste (NOT NULL)
+Nazwisko - niepuste (NOT NULL)
+Wiek - niepuste (NOT NULL)
+bagażRejestowany  - zawiera się w ('TAK', 'NIE')
+
+Przybysz:
+
+idLotu - numer
+nrPaszportu - napis(9)
+Imie - napis(20)
+Nazwisko - napis(30)
+Wiek - numer
+bagażRejestowany - napis(3)
+więzy integralności:
+idLotu - klucz obcy łączący z tablica Przyloty
+nrPaszportu - klucz główny
+Imie - niepuste (NOT NULL)
+Nazwisko - niepuste (NOT NULL)
+Wiek - niepuste (NOT NULL)
+bagażRejestowany  - zawiera się w ('TAK', 'NIE')
+
+Kontroler:
+
+Imie - napis(30)
+Nazwisko - napis(30)
+bramka - napis(3)
+więzy integralności:
+Imie- niepuste (NOT NULL)
+Nazwisko - niepuste(NOT NULL)
+Bramka - klucz obcy łączący z tabela bramki
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
