@@ -1,0 +1,10 @@
+Projekt przygotowywany zgodnie z wymaganiami na ocene 3
+1.Baza powinna zawierać przynajmniej 10 tabel. - spełnione
+2.Każda tabela powinna być w relacji przynajmniej z jedną z pozostałych tabel. - spełnione
+3.Każdy atrybut powinien posiadać przynajmniej jeden z więzów integralności. - Większość atrybutów posiada takie, jednak istnieją dwa w całej bazie dla których nie pasował żaden,  a nie chciałem zniemiać nich ponieważ bardzo dobrze pasowały do bazy
+4.Każda tabela powinna mieć minimum 10 rekordów składowych. - spełnione
+5.Do schematu przygotowane są zapytania, które mają być według przewidywań projektubazy  najczęściej wykonywane.
+	- min 10 zapytań wybierających – projekcie -spełnione
+	- min 10 selekcji - spełnione
+	- min 10 zapytań łączących (JOIN) dwie tabele - spełnione
+	- min 10 zapytań łączących (JOIN) trzy tabele - spełnione
